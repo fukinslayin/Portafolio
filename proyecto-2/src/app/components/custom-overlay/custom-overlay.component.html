@@ -1,0 +1,11 @@
+<div class="overlay" [ngClass]="{ show: isVisible }" (click)="closeOverlay()">
+  <div class="overlay-content" (click)="$event.stopPropagation()">
+    <app-card
+      *ngIf="character"
+      [item]="character"
+      [getImageUrl]="getImageUrl.bind(this)"
+    ></app-card>
+
+    <p-button (click)="closeOverlay()">Cerrar</p-button>
+  </div>
+</div>

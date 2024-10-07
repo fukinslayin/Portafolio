@@ -1,0 +1,55 @@
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/fonts.scss";
+
+.p-card2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.p-card {
+  border: solid 1.3px $body-color2;
+  filter: drop-shadow(0 0 10px $filter-color);
+  color: $third-white;
+  background-color: $navbar-color;
+  margin: 2rem;
+  position: relative;
+  z-index: 1;
+  min-width: 300px;
+  width: 300px;
+  min-height: 100px;
+
+  .p-card-header {
+    display: flex;
+    justify-content: center;
+    margin: 1.2rem auto;
+
+    .img-size {
+      border-radius: 10%;
+      width: 11rem;
+      min-width: 3rem;
+      filter: drop-shadow(0 0 10px $filter-color);
+    }
+  }
+  .p-card-body {
+    text-align: center;
+    flex-grow: 1;
+    .p-card-title {
+      color: $body-color2;
+      filter: drop-shadow(0 0 20px $filter-color);
+      font-size: 2rem;
+      font-family: "Starjout", sans-serif;
+    }
+    p {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    p strong {
+      color: $yellow-color;
+      filter: drop-shadow(0 0 15px $black-color);
+      font-family: "Starjout", sans-serif;
+    }
+  }
+}

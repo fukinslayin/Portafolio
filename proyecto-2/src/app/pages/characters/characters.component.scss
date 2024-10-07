@@ -1,0 +1,50 @@
+@import "../../../assets/styles/variables.scss";
+@import "../../../assets/styles/fonts.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.characters-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1001;
+  }
+
+  .no-characters {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Starjedi", sans-serif;
+    filter: drop-shadow(0 0 10px $filter-color);
+    color: $third-white;
+    margin-top: 6rem;
+  }
+
+  app-pagination {
+    margin-top: auto;
+    margin-bottom: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .characters-section {
+    .no-characters {
+      margin-top: 13rem;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="container">
+  <app-characters-navbar></app-characters-navbar>
+  <hr />
+  <section class="characters-section">
+    <div class="spinner loading-overlay" *ngIf="loading">
+      Cargando...
+      <i class="pi pi-spin pi-cog" style="font-size: 2rem"></i>
+    </div>
+    <div class="no-characters" *ngIf="!loading && characters.length === 0">
+      <h1>Aún no tienes personajes guardados...</h1>
+      <h3>Guarda tu personaje y vuelve para verlo!</h3>
+    </div>
+    <app-cards
+      [items]="characters"
+      [getImageUrl]="getImageUrl.bind(this)"
+    ></app-cards>
+    <app-pagination
+      [first]="first"
+      [rows]="rows"
+      [totalRecords]="totalRecords"
+      (pageChange)="onPageChange($event)"
+    ></app-pagination>
+  </section>
+  <app-footer></app-footer>
+</div>

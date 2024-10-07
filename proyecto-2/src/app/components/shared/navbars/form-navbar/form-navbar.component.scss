@@ -1,0 +1,34 @@
+@import "../../../../../assets/styles/variables.scss";
+@import "../../../../../assets/styles/fonts.scss";
+
+.form-nav {
+  display: flex;
+  width: 100%;
+  height: 2.9rem;
+  align-items: center;
+  justify-content: center;
+  color: rgb(203, 47, 47);
+  font-family: "StarJedi", sans-serif;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: $gray-color;
+  margin: 2px;
+  border-radius: 10px;
+}
+
+@media (min-width: 1024px) {
+  .form-nav {
+    justify-content: left !important;
+    text-align: left !important;
+    .p-nav {
+      margin-left: 10.7rem !important;
+    }
+  }
+
+  hr {
+    width: 100% !important;
+  }
+}

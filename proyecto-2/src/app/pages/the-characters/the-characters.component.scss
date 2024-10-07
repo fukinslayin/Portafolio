@@ -1,0 +1,41 @@
+@import "../../../assets/styles/fonts.scss";
+@import "../../../assets/styles/variables.scss";
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: rgb(36, 35, 35) !important;
+}
+
+.th-characters {
+  background: rgb(36, 35, 35) !important;
+  color: $filter-color !important;
+  font-size: 15px;
+}
+
+.td-characters {
+  background: rgb(36, 35, 35) !important;
+  color: $filter-color !important;
+}
+
+.p-element {
+  color: rgb(255, 255, 255) !important;
+}
+
+.characters-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1001;
+}
+
+.heart {
+  color: red;
+}

@@ -1,0 +1,155 @@
+<app-characters-navbar></app-characters-navbar>
+
+<div class="card-splitter">
+  <p-splitter
+    [style]="{ height: '300px' }"
+    [panelSizes]="[20, 80]"
+    [minSizes]="[10, 0]"
+    styleClass="mb-5"
+  >
+    <ng-template pTemplate>
+      <div class="img-about col flex align-items-center justify-content-center">
+        <img src="assets/img/imperio.jpg" alt="Image" class="img-about mb-3" />
+      </div>
+    </ng-template>
+    <ng-template pTemplate>
+      <p-splitter layout="vertical" [panelSizes]="[15, 85]">
+        <ng-template pTemplate>
+          <div
+            style="flex-grow: 1"
+            class="img-about flex align-items-center justify-content-center"
+          >
+            <img src="assets/img/logo.jpg" alt="Image" class="img-about mb-3" />
+          </div>
+        </ng-template>
+
+        <ng-template pTemplate>
+          <div
+            class="img-about col flex align-items-center justify-content-center"
+          >
+            <img src="assets/img/Jedi.jpg" alt="Image" class="img-about mb-3" />
+          </div>
+        </ng-template>
+      </p-splitter>
+    </ng-template>
+  </p-splitter>
+</div>
+
+<div class="card">
+  <p-tabView id="closableTabView" class="tabAbout">
+    <p-tabPanel header="Star Wars" [selected]="true">
+      <h1>Historia</h1>
+      <p>
+        "Star Wars" es una icónica saga de ciencia ficción creada por George
+        Lucas, que se desarrolla en una galaxia muy, muy lejana. La historia
+        abarca la lucha entre el bien y el mal, explorando temas de redención,
+        amistad y la batalla entre la República y el Imperio.
+      </p>
+      <h3>La saga principal está dividida en tres trilogías:</h3>
+      <p>
+        Trilogía Original: Comienza con "Una Nueva Esperanza" (1977), donde Luke
+        Skywalker, la Princesa Leia y Han Solo se unen a la Rebelión contra el
+        Imperio Galáctico. Continúa con "El Imperio Contraataca" (1980) y
+        culmina en "El Retorno del Jedi" (1983).
+      </p>
+      <p>
+        Trilogía de Precuelas: Inicia con "La Amenaza Fantasma" (1999) y narra
+        el origen de Anakin Skywalker, su transformación en Darth Vader y la
+        caída de la República.
+      </p>
+      <p>
+        Trilogía de Secuelas: Comienza con "El Despertar de la Fuerza" (2015) y
+        presenta a una nueva generación de héroes, como Rey, Finn y Poe Dameron,
+        enfrentándose a la Primera Orden.
+      </p>
+      <p>
+        La saga se complementa con series animadas, novelas y videojuegos,
+        creando un vasto universo rico en mitología y personajes inolvidables
+        como Yoda, Obi-Wan Kenobi y Darth Vader. La música, compuesta por John
+        Williams, se ha convertido en un símbolo cultural.
+      </p>
+    </p-tabPanel>
+  </p-tabView>
+</div>
+
+<div class="banner-prin">
+  <p-splitter [style]="{ height: '300px' }" styleClass="mb-5">
+    <ng-template pTemplate>
+      <div class="col flex align-items-center justify-content-center">
+        <img class="img-about-2" src="assets/img/lado-malo.jpg" alt="Image" />
+      </div>
+    </ng-template>
+
+    <ng-template pTemplate>
+      <div class="col flex align-items-center justify-content-center">
+        <img class="img-about-2" src="assets/img/lado-bueno.jpg" alt="Image" />
+      </div>
+    </ng-template>
+  </p-splitter>
+</div>
+
+<div class="card">
+  <p-tabView id="closableTabView" class="tabAbout">
+    <p-tabPanel header="El Imperio" [selected]="true">
+      <p>
+        El Imperio de Star Wars, conocido formalmente como el Imperio Galáctico,
+        es una de las fuerzas antagonistas más icónicas de la saga. Se establece
+        tras la caída de la República Galáctica y el ascenso de Palpatine como
+        Emperador. Su objetivo principal es consolidar el control sobre la
+        galaxia, imponiendo un régimen autoritario y eliminando a cualquier
+        oposición.
+      </p>
+      <p>
+        El Imperio se caracteriza por su militarización y la construcción de
+        superarmas, como la Estrella de la Muerte. Utiliza el miedo y la
+        represión para mantener el orden, persiguiendo a los Jedi y a los
+        Rebeldes, quienes luchan por restaurar la libertad y la democracia. La
+        saga sigue la lucha entre el Imperio y la Alianza Rebelde, destacando
+        personajes como Darth Vader, el Emperador y los héroes de la Rebelión,
+        como Luke Skywalker, Leia Organa y Han Solo.
+      </p>
+      <p>
+        El conflicto central explora temas de poder, resistencia y redención,
+        mientras los protagonistas intentan desmantelar el tiránico régimen del
+        Imperio.
+      </p>
+    </p-tabPanel>
+    <p-tabPanel header="Los Jedi">
+      <p>
+        Los Jedi son una orden mística y guerrera en el universo de Star Wars,
+        dedicados a mantener la paz y la justicia en la galaxia. Sus miembros,
+        conocidos como Jedi, son usuarios de la Fuerza, una energía que conecta
+        a todos los seres vivos. La filosofía Jedi se basa en el autocontrol, la
+        sabiduría y la compasión, y se oponen a los Sith, quienes utilizan la
+        Fuerza para el poder y la dominación.
+      </p>
+
+      <p>Estructura y Formación</p>
+
+      <p>
+        Padawan: Un aprendiz que entrena bajo la tutela de un Maestro Jedi.
+        Caballero Jedi: Un Jedi que ha completado su entrenamiento y puede
+        actuar de forma independiente. Gran Maestro: El líder de la Orden,
+        responsable de guiar y tomar decisiones importantes. Historia Los Jedi
+        han sido fundamentales en la historia de la galaxia, luchando contra
+        amenazas como los Sith y el Imperio Galáctico. Durante las Guerras Clon,
+        lucharon por la República, pero tras su caída, muchos Jedi fueron
+        aniquilados en la Orden 66.
+      </p>
+
+      <p>
+        Características Los Jedi son conocidos por sus habilidades con el sable
+        de luz, su conexión con la Fuerza y su compromiso con la ética y la
+        moralidad. A lo largo de la saga, personajes como Yoda, Obi-Wan Kenobi,
+        Luke Skywalker y Rey se destacan por su valentía y sacrificio en la
+        lucha contra el mal.
+      </p>
+
+      <p>
+        Legado A pesar de su casi extinción, la enseñanza y el legado Jedi
+        persisten, inspirando a nuevas generaciones a luchar por la esperanza y
+        la justicia en la galaxia.
+      </p>
+    </p-tabPanel>
+  </p-tabView>
+</div>

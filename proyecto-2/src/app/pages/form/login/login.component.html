@@ -1,0 +1,67 @@
+<app-form-navbar></app-form-navbar>
+<form action="" class="form">
+  <div class="surface-card p-8 shadow-2 border-round w-full lg:w-6">
+    <div class="text-center mb-5">
+      <img src="assets/img/logo.jpg" alt="Image" height="100" class="mb-3" />
+      <div class="text-900 text-3xl font-medium mb-3">Bienvenido otra vez</div>
+      <span class="text-600 font-medium line-height-3"
+        >¿Aun no creas una cuenta?</span
+      >
+      <a
+        class="font-medium no-underline ml-2 text-blue-500 cursor-pointer"
+        [routerLink]="['/register']"
+        >Créala ya que esperas
+      </a>
+    </div>
+
+    <div>
+      <label for="email1" class="block text-900 font-medium mb-2"
+        >Correo Electronico</label
+      >
+      <input
+        id="email1"
+        type="text"
+        placeholder="Correo Electronico"
+        pInputText
+        class="w-full mb-3"
+        [(ngModel)]="credentials.email"
+        name="email"
+      />
+
+      <label for="password1" class="block text-900 font-medium mb-2"
+        >Contraseña</label
+      >
+      <input
+        id="password1"
+        type="password"
+        placeholder="Contraseña"
+        pInputText
+        class="w-full mb-3"
+        [(ngModel)]="credentials.password"
+        name="password"
+      />
+      <button
+        pButton
+        pRipple
+        label="Iniciar Sesion"
+        icon="pi pi-user"
+        class="w-full"
+        (click)="onLogin($event)"
+      ></button>
+      <br /><br />
+      <button
+        icon="pi pi-google"
+        pRipple
+        pButton
+        (click)="signInWithGoogle($event)"
+      >
+        Inicia sesión con Google
+      </button>
+      <p>
+        <a routerLink="/forgot-password" class="custom-link"
+          >Olvidé mi contraseña</a
+        >
+      </p>
+    </div>
+  </div>
+</form>

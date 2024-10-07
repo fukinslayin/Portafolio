@@ -1,0 +1,91 @@
+<app-form-navbar></app-form-navbar>
+<form class="form" autocomplete="off" [formGroup]="form" (ngSubmit)="save()">
+  <div class="surface-card p-8 shadow-2 border-round w-full lg:w-6">
+    <div class="text-center mb-5">
+      <div class="text-900 text-3xl font-medium mb-3">Crea un cuenta</div>
+      <span class="text-600 font-medium line-height-3"></span>
+    </div>
+
+    <div>
+      <label for="username" class="block text-900 font-medium mb-2"
+        >Nombre de Usuario</label
+      >
+      <input
+        class="form-control"
+        id="username"
+        type="text"
+        placeholder="Nombre de Usuario"
+        pInputText
+        class="w-full mb-3"
+        formControlName="username"
+      />
+
+      <label for="email1" class="block text-900 font-medium mb-2"
+        >Correo Electronico</label
+      >
+      <input
+        class="form-control"
+        id="email1"
+        type="text"
+        placeholder="Correo Electronico"
+        pInputText
+        class="w-full mb-3"
+        formControlName="mail"
+        [class.is-invalid]="invalidEmail"
+      />
+      <div class="alert" *ngIf="invalidEmail">
+        <small class="text-red-500"> Ingrese el correo </small>
+      </div>
+
+      <label for="password1" class="block text-900 font-medium mb-2"
+        >Contraseña</label
+      >
+      <input
+        class="form-control"
+        id="password1"
+        type="password"
+        placeholder="password"
+        pInputText
+        class="w-full mb-3"
+        formControlName="password"
+        [class.is-invalid]="passwordinvalid"
+      />
+      <div class="alert" *ngIf="passwordinvalid">
+        <small class="text-red-500"> Ingrese Contraseña </small>
+      </div>
+
+      <label for="password1" class="block text-900 font-medium mb-2"
+        >Repite Contraseña</label
+      >
+      <input
+        class="form-control"
+        id="password2"
+        type="password"
+        placeholder="password"
+        pInputText
+        class="w-full mb-3"
+        formControlName="confirmPassword"
+        [class.is-invalid]="confirmPasswordinvalid"
+      />
+      <div class="alert" *ngIf="confirmPasswordinvalid">
+        <small class="text-red-500"> Ingrese la contraseña correcta </small>
+      </div>
+
+      <button
+        pButton
+        pRipple
+        label="Registrarte"
+        icon="pi pi-user"
+        class="w-full"
+        (click)="onRegister($event)"
+      ></button>
+      <div class="back">
+        <a
+          class="custom-link font-medium no-underline text-blue-500 cursor-pointer mt-5"
+          [routerLink]="['/login']"
+          >Volver
+        </a>
+      </div>
+    </div>
+  </div>
+</form>

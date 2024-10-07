@@ -1,0 +1,79 @@
+<app-characters-navbar></app-characters-navbar>
+<div class="tablecharacters">
+  <div class="search">
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input
+        type="text"
+        pInputText
+        placeholder="Buscar..."
+        (input)="onSearch($event)"
+      />
+    </span>
+  </div>
+  <p-table [value]="characters" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="th-characters">Nombre</th>
+        <th class="th-characters">Altura</th>
+        <th class="th-characters">Año de nacimiento</th>
+        <th class="th-characters">Genero</th>
+        <th class="th-characters">Info</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-character>
+      <tr>
+        <td class="td-characters">{{ character.name }}</td>
+        <td class="td-characters">{{ character.height }}</td>
+        <td class="td-characters">{{ character.birth_year }}</td>
+        <td class="td-characters">{{ character.gender }}</td>
+        <td class="button-container">
+          <button
+            class="buttonjunt"
+            type="button"
+            pButton
+            pRipple
+            icon="pi pi-info-circle"
+            title="Información sobre este personaje."
+            (click)="openOverlay(character)"
+          ></button>
+          <button
+            *ngIf="!character.isFavorite"
+            class="buttonjunt"
+            type="button"
+            pButton
+            pRipple
+            title="Guardar como favorito"
+            icon="pi pi-star-fill"
+            (click)="addToFavorites(character)"
+          ></button>
+          <button
+            *ngIf="character.isFavorite"
+            class="buttonjunt"
+            type="button"
+            pButton
+            pRipple
+            title="Eliminar de favorito"
+            icon="pi pi-times"
+            (click)="removeToFavorite(character)"
+          ></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+<app-pagination
+  [first]="first"
+  [rows]="rows"
+  [totalRecords]="totalRecords"
+  (pageChange)="onPageChange($event)"
+></app-pagination>
+<br />
+<app-footer></app-footer>
+<app-custom-overlay
+  *ngIf="selectedCharacter"
+  [character]="selectedCharacter"
+  (close)="selectedCharacter = null"
+></app-custom-overlay>

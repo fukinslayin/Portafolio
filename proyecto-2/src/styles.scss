@@ -1,0 +1,307 @@
+@use "primeng/resources/themes/lara-light-blue/theme.css";
+@use "primeng/resources/primeng.min.css";
+@use "primeicons/primeicons.css";
+@use "primeflex/primeflex.css";
+
+@import "./assets/styles/variables.scss";
+@import "./assets/styles/fonts.scss";
+
+body {
+  box-sizing: border-box;
+  background: linear-gradient(to top, $wine-color, $black-color);
+  min-height: $default-height;
+}
+
+//classes
+.navbar-hr {
+  border: none;
+  height: 1px;
+  background-color: $white-color;
+  margin: 2px;
+  border-radius: 10px;
+}
+
+.p-paginator-current {
+  color: white !important;
+}
+
+.p-menubar {
+  border: solid 1px $navbar-color;
+  z-index: 1001;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .navbar-icon {
+    filter: drop-shadow(0 0 4px $filter-color);
+    margin-right: 0.5rem;
+  }
+  .p-icon {
+    color: #ccc;
+  }
+  .p-menubar-button {
+    padding-left: 10px;
+    color: #323232;
+  }
+
+  .p-menubar-root-list {
+    background-color: $secondary-color;
+  }
+  .p-menuitem-icon {
+    color: $body-color2;
+  }
+  .p-menuitem-text {
+    font-weight: bold;
+    color: $base-color;
+    filter: drop-shadow(0 0 10px $black-color);
+  }
+  .span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span {
+      font-family: "StarJedi", sans-serif;
+      font-weight: bold;
+      color: $third-white;
+      margin-right: 1rem;
+    }
+  }
+}
+.p-tabview {
+  .p-tabview-panels {
+    background-color: rgb(36, 35, 35) !important;
+    color: rgb(255, 255, 255) !important;
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1) !important;
+  }
+  .p-tabview-nav {
+    background-color: rgb(36, 35, 35) !important;
+  }
+  .p-tabview-nav-link {
+    background: $secondary-color !important;
+    color: $filter-color !important;
+  }
+}
+
+//formularios
+
+.surface-card {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: black !important;
+  border: 1px solid #ccc !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1) !important;
+}
+
+.text-900 {
+  color: $color-form !important;
+}
+
+.text-600 {
+  color: $color-form !important;
+}
+
+a.custom-link {
+  color: $color-form !important;
+}
+
+a.custom-link:hover {
+  color: #cf3852 !important;
+}
+
+.p-toast-message-content {
+  background-color: $third-white;
+}
+
+.tablecharacters {
+  padding-bottom: 1rem;
+  .search {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.img-about {
+  height: 300px;
+  width: 180px;
+  background-size: cover;
+}
+
+.img-about-2 {
+  width: 200px;
+  height: 250px;
+  background-size: cover;
+}
+.card-splitter {
+  margin-top: 6rem;
+}
+
+.card-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 1.5rem;
+  margin-top: 3.2rem;
+  z-index: 1;
+}
+
+.characters-section {
+  margin: $default-margin;
+}
+
+.custom-background {
+  background-color: var(--primary-color);
+}
+
+.tablecharacters {
+  margin-top: 6rem;
+}
+
+.footer {
+  display: flex;
+  color: $third-white;
+  justify-content: center;
+  align-items: center;
+  background-color: $navbar-color;
+  width: $default-width;
+  height: 4rem;
+}
+
+//*ANIMACIONES*//
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.p-component {
+  background-color: $navbar-color;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  &.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+
+  &.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+  }
+}
+
+/*-------> Media Queries <-----------*/
+@media (min-width: 1024px) {
+  .p-menubar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .p-submenu-list {
+    background-color: $navbar-color;
+    .p-menuitem-text {
+      color: $third-white;
+    }
+  }
+
+  .p-menubar-root-list {
+    margin-right: 2.9rem;
+  }
+
+  .p-menuitem-text {
+    color: $third-white !important;
+    filter: drop-shadow(0 0 20px $filter-color) !important;
+  }
+
+  .p-menubar-start {
+    flex: 1;
+  }
+  .form {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-about {
+    height: 300px;
+    width: 500px;
+    background-size: cover;
+  }
+  .img-about-2 {
+    width: 700px;
+    height: 290px;
+    background-size: cover;
+  }
+
+  .card-splitter {
+    margin-top: 5rem;
+  }
+
+  .card-container {
+    margin-top: 4rem !important;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 0;
+    z-index: 1;
+    .p-card2 {
+      margin: 1rem;
+    }
+    .p-card {
+      display: flex;
+      width: 450px;
+      margin: 0;
+
+      min-height: 11px;
+      .p-card-header {
+        margin: 1rem;
+      }
+      .p-card-body {
+        .p-card-title {
+          font-size: 1.1rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+        p strong {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .img-size {
+      height: 12rem;
+      margin: auto 0;
+    }
+  }
+  .p-menubar-root-list {
+    background-color: $navbar-color !important;
+  }
+}
