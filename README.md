@@ -8,3 +8,6 @@ Proyecto Web utilizando HTML, JavaScript y CSS (Servicio 'Rick and Morty') Descr
 
 Proyecto 2
 Proyecto con Angular y Firebase Descripción del Proyecto: Se desarrolló una aplicación utilizando Angular como framework de desarrollo, integrando Firebase para el almacenamiento de datos y el manejo de sesiones de usuario. Además, se implementaron los estándares de desarrollo establecidos y se utilizó GitFlow para el manejo de ramas y versiones. Cabe recalcar que fue hecho como proyecto compartido (entre otra persona y mi persona).
+
+LINK PARA EL PORTAFOLIO (BASICO):
+https://fukinslayin.github.io/portafolio/
