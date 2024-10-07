@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rick and Morty API</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Griffy&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="header" class="header">
+        <div class="hider">
+          <h1 class="title">RETO FRONTEND - NEQUI</h1>
+          <h2 class="title">Personajes de Rick And Morty</h2>
+        </div>
+      </header>
+      <hr />
+      <main>
+        <section>
+          <div class="searcher">
+            <input
+              type="text"
+              class="search-box"
+              id="search-box"
+              placeholder="Buscar personaje..."
+            />
+            <div class="status__container">
+              <select id="status" class="status">
+                <option value="">Filtrar Estado</option>
+                <option value="alive">Vivo</option>
+                <option value="dead">Muerto</option>
+                <option value="unknown">Desconocido</option>
+              </select>
+            </div>
+          </div>
+          <div id="characters" class="caracteres"></div>
+          <div id="page-info" class="page-info"></div>
+          <div id="pagination" class="paginacion">
+            <button id="prev-button" disabled>Página anterior</button>
+            <button id="next-button">Siguiente página</button>
+          </div>
+          <button
+            title="show favorites"
+            class="view-favorites"
+            onclick="window.location.href='./pages/favorites/favorites.html'"
+          >
+            <i class="fas fa-heart"></i>
+          </button>
+        </section>
+      </main>
+      <hr />
+      <footer class="footer">
+        <p>Hecho por Juan Sebastián García Agudelo.<br />&copy; 2024</p>
+      </footer>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../rickandmorty/js/main.js"></script>
+  </body>
+</html>

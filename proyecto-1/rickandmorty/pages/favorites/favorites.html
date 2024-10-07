@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favoritos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Griffy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./favorites.css" />
+    <link rel="stylesheet" href="/rickandmorty/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="header" class="header">
+        <div class="hider">
+          <h1 class="title">FAVORITOS</h1>
+          <h2 class="title">Personajes de Rick And Morty</h2>
+        </div>
+      </header>
+      <hr />
+      <main>
+        <section>
+          <div id="favorites-container">
+            <button
+              class="back-button"
+              onclick="window.location.href='../../index.html'"
+            >
+              Volver
+            </button>
+            <div id="characters" class="characters-container caracteres"></div>
+            <span id="page-info" class="page-info"></span>
+            <div id="pagination" class="pagination">
+              <button id="prev-button" class="pagination-button">
+                Página Anterior
+              </button>
+              <button id="next-button" class="pagination-button">
+                Página Siguiente
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <hr />
+      <footer class="footer">
+        <p>Hecho por Juan Sebastián García Agudelo.<br />&copy; 2024</p>
+      </footer>
+    </div>
+  </body>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="module" src="../favorites/favorites.page.js"></script>
+</html>

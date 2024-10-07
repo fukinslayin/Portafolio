@@ -1,0 +1,15 @@
+/* variables.css */
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-green: #51bc51;
+  --color-claro: #51bcaa;
+  --color-dark: #112812;
+  --color-vclaro: #adfebf;
+  --color-dark2: #122812;
+  --color-darkgreen: #438b43;
+  --color-lightgreen: #60d59d;
+  --color-grey: #325e48;
+  --color-lightgreen2: #b9fcdc;
+  --color-red: red;
+}
